@@ -28,7 +28,7 @@ npm start
 ---
 
 
-## Un Swagger est disponible [ICI](http://localhost:3000/api#) ici pour tester et visualiser les différents endpoints
+## Un Swagger est disponible <a href="http://localhost:3000/api#" target="_blank">ICI</a> ici pour tester et visualiser les différents endpoints
 ```
 Lien : http://localhost:3000/api#/
 ```
