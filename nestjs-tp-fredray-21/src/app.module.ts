@@ -2,10 +2,10 @@ import {MiddlewareConsumer, Module, NestModule} from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import {UserModule} from "./user/user.module";
-import {UserController} from "./user/user.controller";
 import {LoggerMiddleware} from "./logger/logger.middleware";
 import {LoggerModule} from "./logger/logger.module";
 import {LoggerInterface} from "./logger/logger.interface";
+import {BookModule} from "./book/book.module";
 
 const optionsLogs: Record<string, LoggerInterface[]> =
 {
@@ -13,8 +13,8 @@ const optionsLogs: Record<string, LoggerInterface[]> =
 }
 
 @Module({
-  imports: [UserModule, LoggerModule.register(optionsLogs)],
-  controllers: [AppController, UserController],
+  imports: [UserModule, LoggerModule.register(optionsLogs), BookModule],
+  controllers: [AppController],
   providers: [AppService],
 })
 
